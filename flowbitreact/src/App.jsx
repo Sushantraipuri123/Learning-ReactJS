@@ -8,7 +8,7 @@ function App() {
 
   return (
    <>
-<h1>
+<h1 className=' bg-slate-400 text-3xl'> 
 Learning  flowbite 
 
 </h1>
