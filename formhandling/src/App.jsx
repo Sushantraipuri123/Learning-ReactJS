@@ -32,7 +32,7 @@ function App() {
 
     <h1 className="mt-2  mb-5 text-2xl font-mono font-semibold text-white  italic">Handling form using "React-Hook-Form"</h1>
     {isSubmitting && <div> Submitting...</div>}
-    {isSubmitSuccessful && <div> Submitted </div>}
+    {isSubmitSuccessful && <div className=" text-green-500"> Submitted </div>}
       <form action="" onSubmit={handleSubmit(onSubmit)}>
         <div>
         <input placeholder="Username"
