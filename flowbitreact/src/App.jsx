@@ -8,7 +8,7 @@ function App() {
 
   return (
    <>
-<h1 className=' bg-slate-400 text-3xl'> 
+{/* <h1 className=' bg-slate-400 text-3xl'> 
 Learning  flowbite 
 </h1>
 
@@ -22,7 +22,7 @@ Learning  flowbite
 <Button outline gradientDuoTone="purpleToBlue" className=' mt-7 focus:outline-none'>
         Purple to Blue
       </Button>
-    </Card>
+    </Card> */}
 
 
    </>
