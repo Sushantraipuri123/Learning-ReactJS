@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { Button } from 'flowbite-react';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,11 +10,18 @@ function Navbar() {
   };
 
   return (
-    <nav className='bg-slate-200'>
-      <div className='hidden md:flex gap-5 text-xl p-5'>
-        <NavLink to='/' exact activeClassName='active'>Home</NavLink>
-        <NavLink to="/about" activeClassName='active'>About</NavLink>
-        <NavLink to="/service" activeClassName='active'>Services</NavLink>
+    <nav className='bg-slate-300 p-5 flex justify-between'>
+      <div className='hidden md:flex gap-5  text-xl '>
+        <NavLink to='/'
+          className={({ isActive }) => `${isActive ? " text-red-400" : " text-black"}`}
+        >Home</NavLink>
+        <NavLink to="/about"
+          className={({ isActive }) => `${isActive ? " text-red-400" : " text-black"}`}
+        >About</NavLink>
+        <NavLink to="/service"
+          className={({ isActive }) => `${isActive ? " text-red-400" : " text-black"}`}
+        >Services</NavLink>
+
       </div>
       <button
         className='text-2xl font-bold p-4 text-red-600 md:hidden'
@@ -23,11 +31,16 @@ function Navbar() {
       </button>
       {isOpen && (
         <div className='md:hidden flex flex-col gap-5 text-xl p-5'>
-          <NavLink to='/' exact activeClassName='active'>Home</NavLink>
-          <NavLink to="/about" activeClassName='active'>About</NavLink>
-          <NavLink to="/service" activeClassName='active'>Services</NavLink>
+          <NavLink to='/' className={({ isActive }) => `${isActive ? " text-red-400" : " text-black"}`}
+            onClick={toggleNavbar} >Home</NavLink>
+          <NavLink to="/about" className={({ isActive }) => `${isActive ? " text-red-400" : " text-black"}`} onClick={toggleNavbar} >About</NavLink>
+          <NavLink to="/service" className={({ isActive }) => `${isActive ? " text-red-400" : " text-black"}`} onClick={toggleNavbar} >Services</NavLink>
         </div>
       )}
+
+      <div>
+        <Button color="blue">Login</Button>
+      </div>
     </nav>
   );
 }
