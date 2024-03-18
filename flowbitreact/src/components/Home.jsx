@@ -1,5 +1,7 @@
 import React from 'react'
 import { Card } from 'flowbite-react';
+import { Button } from 'flowbite-react';
+
 function Home() {
   return (
     <div>
@@ -10,6 +12,9 @@ function Home() {
       <p className="font-normal text-gray-700 dark:text-gray-400">
         Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
       </p>
+      <Button outline gradientDuoTone="purpleToBlue" className=' mt-7 focus:outline-none'>
+        Purple to Blue
+      </Button>
     </Card>
     </div>
   )
