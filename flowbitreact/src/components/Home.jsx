@@ -5,7 +5,7 @@ import { Button } from 'flowbite-react';
 function Home() {
   return (
     <div>
-         <Card href="#" className="max-w-sm">
+         <Card href="#" className="max-w-sm mt-4 ms-3" >
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
         Noteworthy technology acquisitions 2021
       </h5>
