@@ -39,7 +39,9 @@ function Navbar() {
       )}
 
       <div>
-        <Button color="blue">Login</Button>
+      <Button as="span" className="cursor-pointer" color='blue' pill>
+        Sign up
+      </Button>
       </div>
     </nav>
   );
