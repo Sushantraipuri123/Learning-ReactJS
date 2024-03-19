@@ -9,13 +9,14 @@ function Home() {
 
 <div className="h-56  mt-4 sm:h-64 xl:h-80 2xl:h-96">
       <Carousel>
-        <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="..." />
+        <img src="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg" alt="..." className=' ' />
         <img src="https://img.freepik.com/premium-photo/nature-beauty-captured-through-tranquil-mountain-scene-generative-ai_188544-9127.jpg" alt="..." />
         <img src="https://img.freepik.com/premium-photo/wonderful-nature-landscape-beautiful-sky-land-clouds-unique-colors_997220-431.jpg?size=626&ext=jpg&ga=GA1.1.1413502914.1697155200&semt=ais" alt="..." />
         <img src="https://media.istockphoto.com/id/485371557/photo/twilight-at-spirit-island.jpg?s=612x612&w=0&k=20&c=FSGliJ4EKFP70Yjpzso0HfRR4WwflC6GKfl4F3Hj7fk=" alt="..." />
         <img src="https://img.freepik.com/premium-photo/beautiful-pictures-beautiful-landscapes-great-design-any-purposes-beautiful-wallpaper-white-color-background-green-nature_155807-9598.jpg" alt="..." />
       </Carousel>
     </div>
+<section className=' flex flex-wrap justify-evenly'>
 
          <Card href="#" className="max-w-sm mt-4 ms-3" >
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
@@ -28,6 +29,40 @@ function Home() {
         Purple to Blue
       </Button>
     </Card>
+         <Card href="#" className="max-w-sm mt-4 ms-3" >
+      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Noteworthy technology acquisitions 2021
+      </h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">
+        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+      </p>
+      <Button outline gradientDuoTone="purpleToBlue" className=' mt-7 focus:outline-none'>
+        Purple to Blue
+      </Button>
+    </Card>
+         <Card href="#" className="max-w-sm mt-4 ms-3" >
+      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Noteworthy technology acquisitions 2021
+      </h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">
+        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+      </p>
+      <Button outline gradientDuoTone="purpleToBlue" className=' mt-7 focus:outline-none'>
+        Purple to Blue
+      </Button>
+    </Card>
+         <Card href="#" className="max-w-sm mt-4 ms-3" >
+      <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+        Noteworthy technology acquisitions 2021
+      </h5>
+      <p className="font-normal text-gray-700 dark:text-gray-400">
+        Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+      </p>
+      <Button outline gradientDuoTone="purpleToBlue" className=' mt-7 focus:outline-none'>
+        Purple to Blue
+      </Button>
+    </Card>
+</section>
 
     {/* ========= accordian========= */}
     <div className=' mt-7 mb-5'>
