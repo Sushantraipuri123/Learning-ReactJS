@@ -1,6 +1,6 @@
-import { useState } from 'react'
-import './App.css'
+
 import { Button } from '@mui/material'
+import Navbar from './components/Navbar'
 
 
 function App() {
@@ -8,7 +8,8 @@ function App() {
 
   return (
     <>
-     <Button variant='contained'>Login</Button>
+    <Navbar/>
+     <Button variant='contained' disableElevation>Login</Button>
     </>
   )
 }
