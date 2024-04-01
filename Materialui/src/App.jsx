@@ -9,7 +9,7 @@ function App() {
   return (
     <>
     <Navbar/>
-     <Button variant='contained' disableElevation>Login</Button>
+     
     </>
   )
 }
