@@ -14,6 +14,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
+import { Margin } from '@mui/icons-material';
 
 const drawerWidth = 240;
 const navItems = ['Home', 'About', 'Contact'];
@@ -72,7 +73,9 @@ function Navbar(props) {
               <Button key={item} sx={{ color: '#fff' }}>
                 {item}
               </Button>
+              
             ))}
+            <Button variant='contained' >Login</Button>
           </Box>
         </Toolbar>
       </AppBar>
