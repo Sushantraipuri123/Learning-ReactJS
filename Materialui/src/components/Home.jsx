@@ -7,7 +7,7 @@ import { CardActionArea,Container, Button, CardActions } from '@mui/material';
 
 export default function Home() {
     return (
-        <Container sx={{ display: 'flex' }}>
+        <Container  maxWidth="sm" sx={{ display: 'flex', gap:8 }}>
         
             <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
