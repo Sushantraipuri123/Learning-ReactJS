@@ -41,6 +41,8 @@
   color: #888;
 }
 
-.floatbnt{
-  
+.floatbtn{
+  position: fixed;
+  bottom: 15px;
+  right: 25px;
 }
