@@ -26,9 +26,9 @@ function App() {
     alert(value)
   };
 
-  let customBtn = ()=>{
-     alert("I Was Clicked")
-     setDisable(true)
+  let customBtn = () => {
+    alert("I Was Clicked")
+    setDisable(true)
   }
 
   const handleLikes = () => {
@@ -37,51 +37,54 @@ function App() {
 
   return (
     <>
-      
+
       <Button
-       variant="outlined" 
-       color={color}
-       onClick={()=>{customBtn()}}
-       disabled={disable}
-       >MUI button</Button>
-       
-       <h1>MUI Button Group</h1>
+        variant="outlined"
+        color={color}
+        onClick={() => { customBtn() }}
+        disabled={disable}
+      >MUI button</Button>
 
-       <ButtonGroup variant='contained' orientation='horizontal'>
-       <Button>one </Button>
-       <Button>two </Button>
-       <Button>three</Button>
+      <h1>MUI Button Group</h1>
 
-       </ButtonGroup>
+      <ButtonGroup variant='contained' orientation='horizontal'>
+        <Button>one </Button>
+        <Button>two </Button>
+        <Button>three</Button>
 
-       <h1>MUI Check box</h1>
-       <Checkbox color='secondary' value={includes} disableRipple onClick={()=>{console.log(includes)}} onChange={()=>{setIncludes(!includes)}}/>
+      </ButtonGroup>
 
-       <h1>Like Dislike Check box</h1>
-       <Checkbox  color='secondary'   onChange={handleLikes} icon={<BookmarkBorderIcon  />} checkedIcon={<BookmarkIcon  />} /> {likes}
-         
-         <div className='floatbtn'>
+      <h1>MUI Check box</h1>
+      <Checkbox color='secondary' value={includes} disableRipple onClick={() => { console.log(includes) }} onChange={() => { setIncludes(!includes) }} />
 
-       <Floatbtn/>
-         </div>
+      <h1>Like Dislike Check box</h1>
+      <Checkbox color='secondary' onChange={handleLikes} icon={<BookmarkBorderIcon />} checkedIcon={<BookmarkIcon />} /> {likes}
 
-         
-       <h1>MUI radio btn</h1>
+      <div className='floatbtn'>
+        <a href="#">
+          <Floatbtn />
+        </a>
+      </div>
 
-       <FormControl>
-      <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
-      <RadioGroup
-        aria-labelledby="demo-controlled-radio-buttons-group"
-        name="controlled-radio-buttons-group"
-        value={value}
-        onChange={handleChange}
-      >
-        <FormControlLabel value="male" color='secondary'  control={<Radio  disableRipple color='secondary'/>} label="Female"/>
-        <FormControlLabel value="female" color='secondary' control={<Radio  disableRipple  sx={{color:pink[800], '&.Mui-checked': {
-            color: pink[600],
-          },}}/>} label="Male" />
-      </RadioGroup>
-    </FormControl>
+
+      <h1>MUI radio btn</h1>
+
+      <FormControl>
+        <FormLabel id="demo-controlled-radio-buttons-group">Gender</FormLabel>
+        <RadioGroup
+          aria-labelledby="demo-controlled-radio-buttons-group"
+          name="controlled-radio-buttons-group"
+          value={value}
+          onChange={handleChange}
+        >
+          <FormControlLabel value="male" color='secondary' control={<Radio disableRipple color='secondary' />} label="Female" />
+          <FormControlLabel value="female" color='secondary' control={<Radio disableRipple sx={{
+            color: pink[800], '&.Mui-checked': {
+              color: pink[600],
+            },
+          }} />} label="Male" />
+        </RadioGroup>
+      </FormControl>
     </>
   )
 }
