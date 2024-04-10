@@ -12,6 +12,8 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
 import { pink } from '@mui/material/colors';
+import Box from '@mui/material/Box';
+import Slider from '@mui/material/Slider';
 
 function App() {
   const [color, setColor] = useState("secondary")
@@ -85,6 +87,19 @@ function App() {
           }} />} label="Male" />
         </RadioGroup>
       </FormControl>
+
+      <h1>MUI Slider</h1>
+
+      <Box sx={{ width: 300 }}>
+      <Slider
+        size="small"
+        defaultValue={70}
+        aria-label="Small"
+        valueLabelDisplay="auto"
+      />
+      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+    </Box>
+    
     </>
   )
 }
