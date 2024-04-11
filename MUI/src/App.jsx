@@ -90,11 +90,12 @@ function App() {
 
       <h1>MUI Slider</h1>
 
-      <Box sx={{ width: 300 }}>
+      <Box sx={{ width: 300 , display:"flex", justifyContent:"center"}}>
        
       <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
     </Box>
 
+this is the 
     </>
   )
 }
