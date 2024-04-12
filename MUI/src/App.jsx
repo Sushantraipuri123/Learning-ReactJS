@@ -14,6 +14,9 @@ import FormLabel from '@mui/material/FormLabel';
 import { pink } from '@mui/material/colors';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
+import HoriSlider from './components/Slider';
+import Stack from '@mui/material/Stack';
+import Divider from '@mui/material/Divider';
 
 function App() {
   const [color, setColor] = useState("secondary")
@@ -91,11 +94,17 @@ function App() {
       <h1>MUI Slider</h1>
 
       <Box sx={{ width: 300 , display:"flex", justifyContent:"center"}}>
+      <Stack
+        direction="row"
        
-      <Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" />
+        spacing={22}
+      >
+      <Slider color='secondary' disableRipple defaultValue={20} step={20} marks min={10} max={110} valueLabelDisplay="auto" />
+
+      <HoriSlider/>
+      </Stack>
     </Box>
 
-this is the 
     </>
   )
 }
