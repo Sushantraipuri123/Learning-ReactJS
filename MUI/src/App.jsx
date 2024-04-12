@@ -16,7 +16,7 @@ import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import HoriSlider from './components/Slider';
 import Stack from '@mui/material/Stack';
-import Divider from '@mui/material/Divider';
+import ThemeSwitch from './components/Theme';
 
 function App() {
   const [color, setColor] = useState("secondary")
@@ -43,6 +43,9 @@ function App() {
   return (
     <>
 
+<div style={{display:"flex", justifyContent:"end"}}>
+  <ThemeSwitch/>
+</div>
       <Button
         variant="outlined"
         color={color}
