@@ -1,5 +1,9 @@
 import React, { useEffect, useState } from 'react'
-
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
 
 
 function TextArea() {
@@ -20,6 +24,13 @@ function TextArea() {
         const synth = window.speechSynthesis;
         const utterance = new SpeechSynthesisUtterance(text);
 
+        // const voices = synth.getVoices()
+
+        // const femaleVoice = voices.find(voice=> voice.name.includes('Female')|| voice.name.includes('female') || voice.gender === 'female')
+        // if (femaleVoice) {
+        //     utterance.voice = femaleVoice;
+        // }
+        
         if(stopped){
             synth.resume()
         }
