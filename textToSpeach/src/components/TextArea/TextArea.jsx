@@ -9,6 +9,7 @@ import FormLabel from '@mui/material/FormLabel';
 function TextArea() {
     const [text, setText] = useState()
     const [stopped, setStopped] = useState(false)
+    const [selectedValue, setSelectedValue] = useState('female');
     console.log(text, "hsdjh")
 
     useEffect(() => {
@@ -17,8 +18,15 @@ function TextArea() {
 
         return () => {
             synth.cancel();
-          };
+        };
     }, [text])
+
+    const handleChange = (event) => {
+        setSelectedValue(event.target.value);
+       
+            alert(selectedValue)
+      
+    };
 
     const handleSpeak = () => {
         const synth = window.speechSynthesis;
@@ -30,20 +38,20 @@ function TextArea() {
         // if (femaleVoice) {
         //     utterance.voice = femaleVoice;
         // }
-        
-        if(stopped){
+
+        if (stopped) {
             synth.resume()
         }
         synth.speak(utterance);
-      
+
     }
-    const handleStop = () => { 
+    const handleStop = () => {
         const synth = window.speechSynthesis;
 
-    synth.cancel();
+        synth.cancel();
 
 
-    setStopped(true)
+        setStopped(true)
     }
 
     const handleReset = () => {
@@ -58,6 +66,23 @@ function TextArea() {
                 value={text}
                 onChange={(e) => setText(e.target.value)}
             />
+            {/* select voice=== */}
+            <div>
+                <FormControl>
+                    <FormLabel id="demo-row-radio-buttons-group-label">select voice</FormLabel>
+                    <RadioGroup
+                        row
+                        aria-labelledby="demo-row-radio-buttons-group-label"
+                        name="row-radio-buttons-group"
+                        value={selectedValue}
+                        onChange={handleChange}
+                        
+                    >
+                        <FormControlLabel  value="female" dissableRipple control={<Radio />} label="Female" />
+                        <FormControlLabel value="male" control={<Radio />} label="Male" />
+                    </RadioGroup>
+                </FormControl>
+            </div>
 
             <div className=' flex flex-wrap gap-3 mt-3  justify-center '>
                 <button className=' py-1 px-2 rounded bg-violet-500'
